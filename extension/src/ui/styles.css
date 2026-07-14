@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+/* Tailwind v4 inline theme. Dark-first, rounded, native-feeling. */
+:root {
+  --color-base: oklch(20% 0.02 270);
+  --color-surface: oklch(24% 0.02 270);
+  --color-surface-2: oklch(28% 0.02 270);
+  --color-border: oklch(36% 0.02 270);
+  --color-text: oklch(96% 0.01 270);
+  --color-muted: oklch(70% 0.02 270);
+  --color-accent: oklch(72% 0.16 250);
+  --color-danger: oklch(64% 0.22 25);
+  --color-warn: oklch(78% 0.16 75);
+  --color-ok: oklch(74% 0.17 150);
+
+  --radius: 0.75rem;
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-base);
+  color: var(--color-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.surface-2 { background: var(--color-surface-2); }
+.muted { color: var(--color-muted); }
+.accent { color: var(--color-accent); }
+.danger { color: var(--color-danger); }
+.ok { color: var(--color-ok); }
+.warn { color: var(--color-warn); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: calc(var(--radius) - 0.25rem);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.05s ease, background 0.1s ease;
+  font-size: 0.85rem;
+}
+.btn:hover { background: var(--color-border); }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--color-accent); color: oklch(15% 0.02 250); border-color: transparent; }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-danger { background: var(--color-danger); color: oklch(15% 0.02 25); border-color: transparent; }
+.btn-danger:hover { filter: brightness(1.05); }
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: calc(var(--radius) - 0.25rem);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  outline: none;
+}
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--color-accent) 30%, transparent);
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 6px currentColor;
+}

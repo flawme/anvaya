@@ -1,0 +1,17 @@
+# Compiled outputs
+target/
+**/*.rs.bk
+
+# Build artifacts
+dist/
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local env / logs
+.env
+*.log

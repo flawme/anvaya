@@ -1,0 +1,19 @@
+Anvaya is dual-licensed under either:
+
+  - the MIT license (LICENSE-MIT), or
+  - the Apache License, Version 2.0 (LICENSE-APACHE)
+
+at your option. You may choose either license when redistributing or deriving
+from this project, and standard dual-license compatibility applies (Apache
+2.0 software may also be used under the MIT license).
+
+Unless you explicitly state otherwise, any contribution intentionally
+submitted for inclusion in this repository by you, as defined in the Apache
+License (Version 2.0), shall be dual-licensed as above, without any
+additional terms or conditions.
+
+---
+
+DISCLAIMER OF LIABILITY
+
+By using, distributing, or creating derivative works of this software, you acknowledge that the creators and contributors of Anvaya are not responsible for how it is utilized. Any usage or derivative software that violates the Terms of Service (ToS) of any AI platform (e.g. OpenAI, Anthropic, Google), or causes destructive, malicious, or unintended modifications to local or remote systems, is strictly the responsibility of the user. The authors of Anvaya disclaim all liability for any damages or breaches of third-party agreements resulting from the use of this software.

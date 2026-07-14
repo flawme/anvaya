@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Anvaya",
+  "version": "0.1.0",
+  "description": "A secure bridge between AI assistants and your local computer. Routes filesystem actions to the Anvaya Rust daemon with explicit user approval.",
+  "permissions": ["storage", "alarms", "activeTab", "scripting"],
+  "host_permissions": [
+    "http://127.0.0.1:7878/*",
+    "http://localhost:7878/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "anvaya@anvaya.dev",
+      "strict_min_version": "121.0"
+    }
+  },
+  "action": {
+    "default_title": "Anvaya",
+    "default_popup": "index.html"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
