@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
   const isExtension = mode !== 'web';
 
   return {
+    base: '',
     plugins: [react(), copyStaticAssets()],
     resolve: {
       alias: { '@': resolve(__dirname, 'src') },
