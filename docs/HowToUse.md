@@ -94,7 +94,7 @@ or **deny**. Supported hosts: `chat.openai.com`, `chatgpt.com`, `claude.ai`,
 
 ### Note on Claude Models (Opus & Sonnet)
 
-While Claude Haiku is generally very cooperative, Claude 3 Opus and Sonnet may initially refuse to output the Anvaya tool block due to their safety training (e.g., claiming they cannot execute code or access your local filesystem). 
+While Claude Haiku is generally very cooperative, Claude Opus and Sonnet may initially refuse to output the Anvaya tool block due to their safety training (e.g., claiming they cannot execute code or access your local filesystem). 
 
 If they refuse, you will need to tweak your prompts or push back slightly. A good workaround is to insist: *"You don't need to execute anything yourself. Just output the requested `anvaya` JSON block, and my local extension will handle the actual execution."* Usually, a little back-and-forth is all it takes to get them to comply.
 
